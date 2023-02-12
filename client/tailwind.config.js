@@ -7,7 +7,8 @@ module.exports = {
         "dawn-blue":"#88c2dd",
         "dusk-pink":"#ff97b6",
         "gray-baft":"#f5f7f9",
-        "glossy-white": "#fffdfa"
+        "glossy-white": "#fffdfa",
+        "storm-gray":"#eaeaea"
       }
     },
     fontFamily: {
