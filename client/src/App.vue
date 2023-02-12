@@ -1,5 +1,5 @@
 <template>
-  <main class="flex flex-col min-h-screen font-Roboto bg-gray-baft">
+  <main class="font-Roboto bg-gray-baft">
     <RouterView class="shadow-lg"/>
   </main>
 </template>
@@ -10,6 +10,7 @@
 
 <style lang="css" scoped>
   main{
+    width: 100vw;
     display: flex;  
     justify-content: center;  
     align-items: center;  
@@ -18,7 +19,7 @@
   div {
     background-color: white;
     width: 88vw;
-    height: 98vh;
+    height: inherit;
     z-index: 1;
   }
 
