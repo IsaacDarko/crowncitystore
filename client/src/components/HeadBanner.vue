@@ -28,7 +28,7 @@
 
 .Hero{
     width: 100%;
-    height: 50rem;
+    height: 70rem;
     display: flex;
     flex: 1;
     flex-direction: row;

@@ -18,7 +18,7 @@
 
   div {
     background-color: white;
-    width: 88vw;
+    width: 90vw;
     height: inherit;
     z-index: 1;
   }

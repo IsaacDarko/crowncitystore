@@ -24,18 +24,22 @@
             <div class="contacts">
                 <h1>fourth col</h1>
             </div>
-            
+
         </div>
 
         <hr class="divider">
 
         <div class="footer-base">
 
-            <div>
-
+            <div class="copyright">
+                <h1>Travel Agent 2023. All Rights Reserved</h1>
             </div>
 
-            <div>
+            <div class="privacy">
+                <ul class="last-menu">
+                    <li>Terms of Service</li>
+                    <li>Privacy Policy</li>
+                </ul>
 
             </div>
 
@@ -104,7 +108,29 @@
     }
 
     .footer-base{
+        width: 100%;
+        height: 75%;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
 
+    .copyright {
+        width: 70%;
+        padding: 2rem 3rem;
+    }
+
+    .last-menu {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: flex-start;    
+        padding: 2rem ;    
+    }
+
+    li {
+        margin-left: 2rem;
     }
 
 </style>

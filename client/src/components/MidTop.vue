@@ -1,10 +1,11 @@
 <template>
-    <div>
-        <h1>MidTop Ready</h1>
-    </div>
+    
+    <ImageSlider />
+   
 </template>
 
 <script setup>
+    import ImageSlider from './ImageSlider.vue';
 
 </script>
 
