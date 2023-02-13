@@ -3,7 +3,7 @@
     <div class="navbar">
 
             <div class='navbar-logo'>
-                <img src={images.logoclear} alt='logo' />
+                <img class="site-logo" src="../assets/svgs/sitelogo.png" alt='logo' />
             </div>
 
             <ul class='navbar-menu'>
@@ -15,8 +15,8 @@
             </ul>
 
             <div class='navbar-icons'> 
-                <h4>hearticon</h4>
-                <h4>carticon</h4>
+                <img class="icons" src="../assets/svgs/heart.png" alt="favourite">
+                <img class="icons" src="../assets/svgs/cart.png" alt="cart">
             </div>
         
     </div>
@@ -24,9 +24,14 @@
 </template>
 
 
+
+
 <script setup>
 
 </script>
+
+
+
 
 <style lang="css" scoped>
     .navbar {
@@ -38,17 +43,37 @@
         padding: 4rem 8rem;
         color: #000;
         position: absolute;
-        z-index: 2;
+        z-index: 5;
+    }
+
+    .site-logo{
+        width: 80px;
+        height: 29px;
     }
 
     .navbar-menu {  
-        width: 50%;
+        width: 40%;
         display: flex;
         flex: 1;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
-        margin: 0 23rem;
+        margin: 0 5rem;
+        padding: 0rem 16rem;
+    }
+
+    .navbar-icons{
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 30%;
+    }
+
+    .icons{
+        width: 20px;
+        height: 20px;
+       margin: 0rem 1rem;
     }
 
     li {

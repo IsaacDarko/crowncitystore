@@ -21,6 +21,7 @@
     width: 90vw;
     height: inherit;
     z-index: 1;
+    overflow: hidden;
   }
 
 </style>
