@@ -15,8 +15,8 @@
             </ul>
 
             <div class='navbar-icons'> 
-                <img class="icons" src="../assets/svgs/heart.png" alt="favourite">
-                <img class="icons" src="../assets/svgs/cart.png" alt="cart">
+                <a href="#"><img class="icons" src="../assets/svgs/heart.png" alt="favourite"></a>
+                <a href="#"><img class="icons" src="../assets/svgs/cart.png" alt="cart"></a>
             </div>
         
     </div>
