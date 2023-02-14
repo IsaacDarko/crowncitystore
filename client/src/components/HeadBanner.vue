@@ -73,21 +73,9 @@
     align-items: center;
     flex-direction: column;
     width: 60%;
+    transition: width 500ms ease-in;
     color: white;
     z-index: 3;
-    animation-delay: 1s;
-    animation-duration: 3s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes expanded {
-   
-    from { 
-            left: 0% 
-        }
-    to { 
-            left:  26%
-        }
 }
 
 .retracted{
@@ -96,21 +84,9 @@
     align-items: center;
     flex-direction: column;
     width: 20%;
+    transition: width 500ms ease-in;
     color: white;
-    z-index: 1;
-    animation: slide 10s ease-in-out linear infinite;
-    animation-delay: 1s;
-    animation-duration: 15s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes retracted {
-  from {
-    transform: translateX(60%);
-  }
-  to {
-    transform: translateX(34%);
-  }
+    z-index: 2;
 }
 
 .blue{
@@ -159,14 +135,18 @@
     font-weight:900;
     font-style: italic;
     color:white;
+    transition: font-size 500ms ease-in;
+    transform: scale(1);
 }
 
 .dawn-title-retracted{
-    z-index:-2;
+    z-index:-1;
     font-style: italic;
     color:white;
     font-size:150px;
     font-weight:900;
+    transition: font-size 500ms ease-in;
+    transform: scale(1);
 }
 
 .noon-title{
@@ -183,14 +163,18 @@
     font-weight:900;
     font-style: italic;
     color:black;
+    transition: font-size 500ms ease-in;
+    transform: scale(1);
 }
 
 .noon-title-retracted{
-    z-index:-2;
+    z-index:-1;
     font-style: italic;
     color:black;
     font-size:150px;
     font-weight:900;
+    transition: font-size 500ms ease-in;
+    transform: scale(1);
 }
 
 .dusk-title{
@@ -207,14 +191,18 @@
     font-weight:900;
     font-style: italic;
     color:white;
+    transition: font-size 500ms ease-in;
+    transform: scale(1);
 }
 
 .dusk-title-retracted{
-    z-index:-2;
+    z-index:-1;
     font-style: italic;
     color:white;
     font-size:150px;
     font-weight:900;
+    transition: font-size 500ms ease-in;
+    transform: scale(1);
 }
 
 
@@ -233,36 +221,18 @@
     width: 525px;
     height: 639px;
     margin: 1rem 0rem;
-    animation: rotation 30s infinite linear;
-    transition-timing-function: ease-in-out;
     rotate: 30deg;
-}
-
-@keyframes hoverimg-dawn-expanded {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(90deg);
-  }
+    transition: rotate 500ms ease-in;
 }
 
 .hoverimg-dawn-retracted{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 525px;
     height: 639px;
     animation: rotate 30s infinite linear;
-    transition-timing-function: ease-in-out;
-}
-
-@keyframes hoverimg-dawn-retracted {
-  from {
-    transform: rotate(90deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+    rotate: 0deg;
+    transition: rotate 500ms ease-in;
 }
 
 
@@ -278,37 +248,17 @@
     z-index: 4;
     width: 519px;
     height: 1041px;
-    animation: rotation 30s infinite linear;
-    transition-timing-function: ease-in-out;
-    rotate: 30deg;
-}
-
-@keyframes hoverimg-noon-expanded {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(90deg);
-  }
+    rotate: 25deg;
+    transition: rotate 500ms ease-in;
 }
 
 .hoverimg-noon-retracted{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 519px;
     height: 1041px;
-    animation: rotation 30s infinite linear;
-    transition-timing-function: ease-in-out;
-   
-}
-
-@keyframes hoverimg-noon-retracted {
-  from {
-    transform: rotate(120deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
+    rotate: 0deg;
+    transition: rotate 500ms ease-in;
 }
 
 
@@ -324,36 +274,17 @@
     z-index: 4;
     width: 520px;
     height: 831px;
-    animation: rotate 30s infinite linear;
-    transition-timing-function: ease-in-out;
     rotate: 31deg;
-}
-
-@keyframes hoverimg-dusk-expanded {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(30deg);
-  }
+    transition: rotate 500ms ease-in;
 }
 
 .hoverimg-dusk-retracted{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 520px;
     height: 831px;
-    animation: rotate 30s infinite linear;
-    transition-timing-function: ease-in-out;
-}
-
-@keyframes hoverimg-dusk-retracted {
-  from {
-    transform: rotate(30deg);
-  }
-  to {
-    transform: rotate(-60deg);
-  }
+    rotate: 0deg;
+    transition: rotate 500ms ease-in;
 }
 
 
