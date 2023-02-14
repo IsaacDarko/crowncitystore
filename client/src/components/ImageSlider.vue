@@ -123,7 +123,7 @@
     }
 
     .slide-left {
-        animation: slide-left 1s ease-in forwards;
+        animation: slide 10s ease-in-out linear infinite;
     }
 
     @keyframes slide-left {
@@ -139,7 +139,7 @@
     }
 
     .slide-right {
-        animation: slide-right 1s ease-in forwards;
+        animation: slide 10s ease-in-out linear infinite;
     }
 
     @keyframes slide-right {

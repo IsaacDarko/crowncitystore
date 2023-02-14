@@ -5,25 +5,24 @@
         @click="expandBox(1)">      
             <img  v-bind:class="{'hoverimg-dawn': currentClicked === 0, 'hoverimg-dawn-expanded': currentClicked === 1, 'hoverimg-dawn-retracted': currentClicked != 1}"
             src="../assets/nikedawns.png" alt="bluenikes" />
-            <h1 class="text-9xl italic font-black">NEW</h1>
-
+            <h1 v-bind:class="{'dawn-title': currentClicked === 0, 'dawn-title-expanded': currentClicked === 1, 'dawn-title-retracted': currentClicked != 1}" 
+            >NEW</h1>
         </div>
 
         <div v-bind:class="{'white bg-storm-gray': currentClicked === 0, 'expanded bg-storm-gray': currentClicked === 2, 'retracted bg-storm-gray': currentClicked != 2}"  
         @click="expandBox(2)">
             <img v-bind:class="{'hoverimg-noon': currentClicked === 0, 'hoverimg-noon-expanded': currentClicked === 2, 'hoverimg-noon-retracted': currentClicked != 2}" 
             src="../assets/nikenoons.png" alt="whitenikes" />
-            <h1 class="text-9xl italic font-black">BOLD</h1>
+            <h1 v-bind:class="{'noon-title': currentClicked === 0, 'noon-title-expanded': currentClicked === 2, 'noon-title-retracted': currentClicked != 2}"
+            >BOLD</h1>
         </div>
 
         <div v-bind:class="{'pink bg-dusk-pink': currentClicked === 0, 'expanded bg-dusk-pink': currentClicked === 3, 'retracted bg-dusk-pink': currentClicked != 3}" 
         @click="expandBox(3)">
-        
-
-
             <img v-bind:class="{'hoverimg-dusk': currentClicked === 0, 'hoverimg-dusk-expanded': currentClicked === 3, 'hoverimg-dusk-retracted': currentClicked != 3}" 
             src="../assets/nikedusks.png" alt="pinknikes" />
-            <h1 class="text-9xl italic font-black">FAST</h1>
+            <h1 v-bind:class="{'dusk-title': currentClicked === 0, 'dusk-title-expanded': currentClicked === 3, 'dusk-title-retracted': currentClicked != 3}"
+            >FAST</h1>
         </div>        
         
     </section>
@@ -76,29 +75,19 @@
     width: 60%;
     color: white;
     z-index: 3;
-    animation: slide 20s ease-in-out linear infinite;
-    overflow: hidden;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes expanded {
-    0% {
-        transform: translateX(34%);
-    }
-    20% {
-        transform: translateX(40%);
-    }
-    40% {
-        transform: translateX(80%);
-    }
-    60% {
-        transform: translateX(90%);
-    }
-    80% {
-        transform: translateX(110%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
+   
+    from { 
+            left: 0% 
+        }
+    to { 
+            left:  26%
+        }
 }
 
 .retracted{
@@ -110,7 +99,9 @@
     color: white;
     z-index: 1;
     animation: slide 10s ease-in-out linear infinite;
-    overflow: hidden;
+    animation-delay: 1s;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes retracted {
@@ -154,6 +145,79 @@
     z-index: 2;
 }
 
+.dawn-title{
+    z-index:0;
+    font-size:150px;
+    font-weight:900;
+    font-style: italic;
+    color:white;
+}
+
+.dawn-title-expanded{
+    z-index:1;
+    font-size:330px;
+    font-weight:900;
+    font-style: italic;
+    color:white;
+}
+
+.dawn-title-retracted{
+    z-index:-2;
+    font-style: italic;
+    color:white;
+    font-size:150px;
+    font-weight:900;
+}
+
+.noon-title{
+    z-index:0;
+    font-size:150px;
+    font-weight:900;
+    font-style: italic;
+    color:black;
+}
+
+.noon-title-expanded{
+    z-index:1;
+    font-size:330px;
+    font-weight:900;
+    font-style: italic;
+    color:black;
+}
+
+.noon-title-retracted{
+    z-index:-2;
+    font-style: italic;
+    color:black;
+    font-size:150px;
+    font-weight:900;
+}
+
+.dusk-title{
+    z-index:0;
+    font-size:150px;
+    font-weight:900;
+    font-style: italic;
+    color:white;
+}
+
+.dusk-title-expanded{
+    z-index:1;
+    font-size:330px;
+    font-weight:900;
+    font-style: italic;
+    color:white;
+}
+
+.dusk-title-retracted{
+    z-index:-2;
+    font-style: italic;
+    color:white;
+    font-size:150px;
+    font-weight:900;
+}
+
+
 
 .hoverimg-dawn {
    position: absolute;
@@ -171,6 +235,7 @@
     margin: 1rem 0rem;
     animation: rotation 30s infinite linear;
     transition-timing-function: ease-in-out;
+    rotate: 30deg;
 }
 
 @keyframes hoverimg-dawn-expanded {
@@ -213,8 +278,9 @@
     z-index: 4;
     width: 519px;
     height: 1041px;
-    animation: rotate 30s infinite linear;
+    animation: rotation 30s infinite linear;
     transition-timing-function: ease-in-out;
+    rotate: 30deg;
 }
 
 @keyframes hoverimg-noon-expanded {
@@ -222,7 +288,7 @@
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(120deg);
+    transform: rotate(90deg);
   }
 }
 
@@ -231,8 +297,9 @@
     z-index: 2;
     width: 519px;
     height: 1041px;
-    animation: rotate 30s infinite linear;
+    animation: rotation 30s infinite linear;
     transition-timing-function: ease-in-out;
+   
 }
 
 @keyframes hoverimg-noon-retracted {
@@ -259,6 +326,7 @@
     height: 831px;
     animation: rotate 30s infinite linear;
     transition-timing-function: ease-in-out;
+    rotate: 31deg;
 }
 
 @keyframes hoverimg-dusk-expanded {
