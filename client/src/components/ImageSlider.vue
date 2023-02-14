@@ -1,15 +1,15 @@
 <template>
-
+    <!--mark-up for image slider imported in the mid-top section -->
     <section class="slider">
 
         <div class="nav">
-            <h2 class="title" >Popular Right Now</h2>
-
+            <h2 class="title" >Popular Right Now</h2><!--Title of section-->
+            <!--slider controls buttons, previous and next buttons with a buffer image in between-->
             <button class="prev" @click="prevImageSet"><img src="../assets/svgs/bkwrdbtn.png" alt="previous" style="height: 25px; width: 25px;"></button>
             <img src="../assets/svgs/buffer.png" alt="button-buffer" style="height: 25px; width: 25px;">
             <button class="next" @click="nextImageSet"><img src="../assets/svgs/fwrdbtn.png" alt="next" style="height: 25px; width: 25px;"></button>
         </div>
-
+        <!--Slider container-->
         <div class="slide">
             <div class="slider-container" >
                 <img v-for="(image, index) in visibleImages"  :key="index" :src="image" :class="index === 0 ? 'slide-left' : 'slide-right'" />
@@ -26,6 +26,7 @@
 
 
 <script>
+//importing all the required images for the slider assigned to variables
     import slide1 from '../assets/rect2.jpg';
     import slide2 from '../assets/rect3.jpg';
     import slide3 from '../assets/rect4.jpg';
@@ -33,7 +34,7 @@
     import slide5 from '../assets/rect6.jpg';
     import slide6 from '../assets/rect7.jpg';
     
-
+    //exporting all data and functions in the script to make the availbale to the entire component
     export default {
         data() {
         return {
@@ -49,12 +50,15 @@
             imagesPerSet: 3
         };
         },
+        //calculating the limit of the number of visible images in a set
         computed: {
         visibleImages() {
             return this.images.slice(this.currentIndex, this.currentIndex + this.imagesPerSet);
         }
         },
+        //setting up my slider control functions
         methods: {
+        //prevImageSet is called when the previous button is clicked
         prevImageSet() {
             if (this.currentIndex === 0) {
             this.currentIndex = this.images.length - this.imagesPerSet;
@@ -62,6 +66,7 @@
             this.currentIndex = Math.max(0, this.currentIndex - this.imagesPerSet);
             }
         },
+        //nextImageSet is called when the next button is clicked
         nextImageSet() {
             if (this.currentIndex + this.imagesPerSet >= this.images.length) {
             this.currentIndex = 0;
@@ -75,7 +80,7 @@
 
 
 
-
+<!--Applying Css styles-->
 <style lang="css" scoped>
     .slider{
         display: flex;
@@ -86,6 +91,7 @@
         display: flex;
         flex: 1;
         flex-direction: row;
+        align-items: flex-end;
     }
 
     .title{
