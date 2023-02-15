@@ -109,7 +109,7 @@
     .next{
         display: flex;
         align-content: flex-start;
-    }
+    } 
 
     .slide{
         width: inherit;
@@ -130,11 +130,13 @@
 
     .slide-left {
         animation: slide 10s ease-in-out linear infinite;
+        transition: slide 500ms ease-in-out;
     }
 
     @keyframes slide-left {
         0% {
             transform: translateX(100%);
+            
         }
         50% {
             transform: translateX(50%);
@@ -146,6 +148,7 @@
 
     .slide-right {
         animation: slide 10s ease-in-out linear infinite;
+        transition: slide 1500ms ease-in-out;
     }
 
     @keyframes slide-right {

@@ -14,7 +14,7 @@
 
                     <button class="shop-button"> Shop</button>
             
-                    <img src="../assets/Rectangle 1.jpg" alt="nike_zoom_x" />
+                    <img src="../assets/rect1.jpg" alt="nike_zoom_x" />
 
                 </div>
         </div>
